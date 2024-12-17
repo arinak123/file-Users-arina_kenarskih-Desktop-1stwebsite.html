@@ -1,0 +1,82 @@
+<html>
+    <head>
+       <title> Arina's website/Nick's task </title> 
+
+       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+
+       <CSS> 
+        <h1 style="text-align:center ;">
+            <style> body {
+                height:100vh ;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0; }
+                img {
+                    width: 150px; 
+                    height: auto;
+                    position: absolute;
+                    bottom: 20px; 
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: none;
+                }
+                #surpriseText {
+            position: absolute;
+            bottom: 20px;
+            left: 55%;
+            transform: translateX(50%); 
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            display: none;}
+            </style>
+
+       </CSS>
+    </head>
+    <body>
+
+<blockquote id="name"> <h1> <em> Hello </em>, Arina! </h1> </blockquote>
+
+<body text="white"> </body>
+<body style = "background-color:red;"> </body>
+
+<button id="but1"> <h3> <strong> Change me </strong>  </h3> </button>
+<img id="image" src="https://designshop-6aa0.kxcdn.com/photos/cute-romantic-christmas-modern-greeting-card-send-online-3133_70.jpg?text=Initial+Image" alt="Initial Image" style="margin-top: 20px;">
+<div id="surpriseText"> Surprise! </div>
+
+
+<script>
+const button = document.getElementById('but1');
+const title = document.getElementById('name');
+const image = document.getElementById('image');
+const surpriseText = document.getElementById('surpriseText');
+button.addEventListener('click', function() {
+    const currentColor = window.getComputedStyle(document.body).backgroundColor;
+    if (currentColor === 'rgb(255, 0, 0)') {
+        document.body.style.backgroundColor = 'blue';
+        title.textContent = 'Hello, Nick!';
+        title.style.fontSize = '70px';
+        title.style.fontWeight = 'bold';
+        image.src = "https://designshop-6aa0.kxcdn.com/photos/cute-romantic-christmas-modern-greeting-card-send-online-3133_70.jpg?text=New+Image";
+        image.style.display = 'block';
+        surpriseText.style.display = 'block';
+    } else {
+        document.body.style.backgroundColor = 'red';
+        title.textContent = 'Hello, Arina!';
+        title.style.fontSize = '70px';
+        title.style.fontWeight = 'bold';
+        image.src ="https://designshop-6aa0.kxcdn.com/photos/cute-romantic-christmas-modern-greeting-card-send-online-3133_70.jpg?text=Initial+Image";
+        image.style.display = 'none';
+        surpriseText.style.display = 'none';
+     }
+    });
+ </script>
+
+
+
+</body>
+
+</html>
+
+
